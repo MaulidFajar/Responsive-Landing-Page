@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <title>Frontend Mentor | Loopstudios landing page</title>
+  </head>
+  <body class="bg-purple-600">
+    <header>
+      <div class="md:container">
+        <nav
+          class="nav md:w-auto md:h-auto px-5 pt-10 md:pt-0 md:flex md:justify-between md:items-center"
+        >
+          <img
+            src="assets/images/logo.svg"
+            alt="Loopstudios logo"
+            class="logo w-32 absolute z-30 md:relative"
+          />
+
+          <img
+            src="assets/images/icon-hamburger.svg"
+            alt=""
+            class="burger_btn absolute z-50 right-5 top-10 md:relative md:top-0 md:right-0 cursor-pointer md:hidden"
+            onclick="handleBurgerBtn()"
+          />
+          <ul
+            class="navbar_list text-3xl md:text-base w-0 h-screen md:w-full md:h-auto bg-black text-white font-thin font-josefin md:bg-transparent flex flex-col md:flex-row gap-x-10 gap-4 fixed md:static top-0 left-0 z-20 overflow-hidden transition-all duration-300 ease-in-out"
+          >
+            <li class="mt-40 pl-5"><a href="#">About</a></li>
+            <li class="pl-5"><a href="#">Careers</a></li>
+            <li class="pl-5"><a href="#">Events</a></li>
+            <li class="pl-5"><a href="#">Products</a></li>
+            <li class="pl-5"><a href="#">Support</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="">
+      <div class="md:container">
+        <section class="hero"></section>
+      </div>
+    </main>
+    <!--      Immersive experiences that deliver The
+    leader in interactive VR Founded in 2011, Loopstudios has been producing
+    world-class virtual reality projects for some of the best companies around
+    the globe. Our award-winning creations have transformed businesses through
+    digital experiences that bind to their brand. Our creations See all Deep
+    earth Night arcade Soccer team VR The grid From up above VR Pocket borealis
+    The curiosity Make it fisheye About Careers Events Products Support © 2021
+    Loopstudios. All rights reserved. -->
+
+    <script src="main.js"></script>
+  </body>
+</html>
