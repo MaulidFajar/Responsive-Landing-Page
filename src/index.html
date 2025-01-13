@@ -17,24 +17,23 @@
     <title>Frontend Mentor | Loopstudios landing page</title>
   </head>
   <body>
-    <header class="absolute md:w-full md:px-28 pt-10 md:pt-7">
+    <header class="absolute w-full md:px-28 pt-10 md:pt-7">
       <nav
         class="nav md:w-full md:h-auto px-5 md:flex md:justify-between md:items-center"
       >
         <img
           src="assets/images/logo.svg"
           alt="Loopstudios logo"
-          class="logo w-32 fixed md:static z-30"
+          class="logo w-32 relative md:static z-[99]"
         />
 
         <img
           src="assets/images/icon-hamburger.svg"
-          alt=""
-          class="burger_btn fixed z-50 right-5 top-10 md:relative md:top-0 md:right-0 cursor-pointer md:hidden"
-          onclick="handleBurgerBtn()"
+          alt="hamburger icon to open menu navigation"
+          class="burger_btn absolute z-[99] right-5 top-10 cursor-pointer md:hidden"
         />
         <ul
-          class="nav_list text-3xl md:text-base w-0 h-screen md:w-auto md:h-auto bg-black text-white font-thin md:font-normal font-josefin md:bg-transparent flex flex-col md:flex-row gap-4 md:gap-x-6 fixed md:static top-0 left-0 z-20 overflow-hidden transition-all duration-300 ease-in-out float-end"
+          class="nav_list text-3xl md:text-base w-0 h-screen md:w-auto md:h-auto bg-black text-white font-thin md:font-normal font-josefin md:bg-transparent flex flex-col md:flex-row gap-4 md:gap-x-6 fixed md:static top-0 left-0 z-[51] overflow-hidden transition-all duration-300 ease-in-out float-end"
         >
           <li class="nav_item mt-40 md:mt-0">
             <a href="#" class="nav_link">About</a>
@@ -58,7 +57,7 @@
       >
         <div class="md:container">
           <div
-            class="hero_text_wrapper p-6 border-2 border-slate-300 w-[335px] md:w-[585px] md:mt-10 relative z-50"
+            class="hero_text_wrapper p-6 border-2 border-slate-300 w-[335px] md:w-[585px] md:mt-10 relative z-50 md:z-50"
           >
             <h1
               class="text-[42px] leading-10 md:text-7xl font-josefin uppercase font-extralight text-white"
@@ -315,10 +314,6 @@
         </div>
       </div>
     </footer>
-    <!--          See all Deep
-    earth Night arcade Soccer team VR The grid From up above VR Pocket borealis
-    The curiosity Make it fisheye About Careers Events Products Support  -->
-
     <script src="main.js"></script>
   </body>
 </html>
