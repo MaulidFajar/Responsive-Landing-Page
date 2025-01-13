@@ -16,49 +16,308 @@
 
     <title>Frontend Mentor | Loopstudios landing page</title>
   </head>
-  <body class="bg-purple-600">
-    <header>
-      <div class="md:container">
-        <nav
-          class="nav md:w-auto md:h-auto px-5 pt-10 md:pt-0 md:flex md:justify-between md:items-center"
+  <body>
+    <header class="absolute md:w-full md:px-28 pt-10 md:pt-7">
+      <nav
+        class="nav md:w-full md:h-auto px-5 md:flex md:justify-between md:items-center"
+      >
+        <img
+          src="assets/images/logo.svg"
+          alt="Loopstudios logo"
+          class="logo w-32 fixed md:static z-30"
+        />
+
+        <img
+          src="assets/images/icon-hamburger.svg"
+          alt=""
+          class="burger_btn fixed z-50 right-5 top-10 md:relative md:top-0 md:right-0 cursor-pointer md:hidden"
+          onclick="handleBurgerBtn()"
+        />
+        <ul
+          class="nav_list text-3xl md:text-base w-0 h-screen md:w-auto md:h-auto bg-black text-white font-thin md:font-normal font-josefin md:bg-transparent flex flex-col md:flex-row gap-4 md:gap-x-6 fixed md:static top-0 left-0 z-20 overflow-hidden transition-all duration-300 ease-in-out float-end"
         >
+          <li class="nav_item mt-40 md:mt-0">
+            <a href="#" class="nav_link">About</a>
+          </li>
+          <li class="nav_item">
+            <a href="#" class="nav_link">Careers</a>
+          </li>
+          <li class="nav_item"><a href="#" class="nav_link">Events</a></li>
+          <li class="nav_item">
+            <a href="#" class="nav_link">Products</a>
+          </li>
+          <li class="nav_item">
+            <a href="#" class="nav_link">Support</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="hero h-screen bg-hero-mobile md:bg-hero-desktop bg-left-top md:bg-top bg-cover bg-no-repeat flex justify-center items-center px-5"
+      >
+        <div class="md:container">
+          <div
+            class="hero_text_wrapper p-6 border-2 border-slate-300 w-[335px] md:w-[585px] md:mt-10 relative z-50"
+          >
+            <h1
+              class="text-[42px] leading-10 md:text-7xl font-josefin uppercase font-extralight text-white"
+            >
+              Immersive experiences that deliver
+            </h1>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      </section>
+      <section>
+        <div class="md:container">
+          <div
+            class="about_us_section px-5 md:p-0 text-center font-primary my-24 relative"
+          >
+            <picture
+              ><source
+                srcset="assets/images/desktop/image-interactive.jpg"
+                media="(min-width: 768px)" />
+              <img src="assets/images/mobile/image-interactive.jpg"
+            /></picture>
+            <div
+              class="md:w-[500px] pt-10 md:pl-14 md:pt-14 md:pb-14 md:pr-1.5 md:text-left md:bg-white md:absolute md:z-50 md:right-0 md:-bottom-14"
+            >
+              <h1
+                class="about_title text-[31px] md:text-[46px] leading-8 md:leading-none font-josefin font-light uppercase"
+              >
+                The leader in interactive VR
+              </h1>
+              <p
+                class="about_description px-6 md:p-0 text-[15px] leading-relaxed text-dark-gray mt-5"
+              >
+                Founded in 2011, Loopstudios has been producing world-class
+                virtual reality projects for some of the best companies around
+                the globe. Our award-winning creations have transformed
+                businesses through digital experiences that bind to their brand.
+              </p>
+            </div>
+          </div>
+          <div
+            class="creation_section relative flex flex-col justify-center items-center md:items-baseline mb-20"
+          >
+            <h1
+              class="creation_title text-center text-[31px] md:text-[44px] font-josefin font-light uppercase order-1 mb-8"
+            >
+              Our creations
+            </h1>
+            <button
+              class="px-7 w-32 py-1 text-[13px] tracking-[3px] border-2 border-darker-gray font-primary uppercase order-3 md:order-2 mt-7 md:absolute md:right-0 md:top-0 md:mt-4 hover:bg-black hover:text-white hover:border-black transition-all duration-300 ease-in-out"
+            >
+              See All
+            </button>
+            <div
+              class="creation_cards grid md:grid-cols-4 gap-y-6 md:gap-x-6 order-2 md:order-3"
+            >
+              <div class="card relative px-5 md:p-0 cursor-pointer">
+                <picture>
+                  <source
+                    srcset="assets/images/desktop/image-deep-earth.jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <img src="assets/images/mobile/image-deep-earth.jpg" />
+                  <div
+                    class="ml-5 w-52 md:w-full md:ml-0 absolute inset-0 bg-gradient-to-r md:bg-gradient-to-t from-black/65 to-transparent"
+                  ></div>
+                </picture>
+                <p
+                  class="absolute bottom-0 ml-5 mb-5 text-white font-josefin uppercase text-2xl leading-6 font-light w-5"
+                >
+                  Deep Earth
+                </p>
+              </div>
+              <div class="card relative px-5 md:p-0 cursor-pointer">
+                <picture>
+                  <source
+                    srcset="assets/images/desktop/image-night-arcade.jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <img src="assets/images/mobile/image-night-arcade.jpg" />
+                  <div
+                    class="ml-5 w-52 md:w-full md:ml-0 absolute inset-0 bg-gradient-to-r md:bg-gradient-to-t from-black/65 to-transparent"
+                  ></div>
+                </picture>
+
+                <p
+                  class="absolute bottom-0 ml-5 mb-5 text-white font-josefin uppercase text-2xl leading-6 font-light w-5"
+                >
+                  Night Arcade
+                </p>
+              </div>
+              <div class="card relative px-5 md:p-0 cursor-pointer">
+                <picture>
+                  <source
+                    srcset="assets/images/desktop/image-soccer-team.jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <img src="assets/images/mobile/image-soccer-team.jpg" />
+                  <div
+                    class="ml-5 w-52 md:w-full md:ml-0 absolute inset-0 bg-gradient-to-r md:bg-gradient-to-t from-black/65 to-transparent"
+                  ></div>
+                </picture>
+                <p
+                  class="absolute bottom-0 ml-5 mb-5 text-white font-josefin uppercase text-2xl leading-6 font-light w-32"
+                >
+                  Soccer Team VR
+                </p>
+              </div>
+              <div class="card relative px-5 md:p-0 cursor-pointer">
+                <picture>
+                  <source
+                    srcset="assets/images/desktop/image-grid.jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <img src="assets/images/mobile/image-grid.jpg" />
+                  <div
+                    class="ml-5 w-52 md:w-full md:ml-0 absolute inset-0 bg-gradient-to-r md:bg-gradient-to-t from-black/65 to-transparent"
+                  ></div>
+                </picture>
+                <p
+                  class="absolute bottom-0 ml-5 mb-5 text-white font-josefin uppercase text-2xl leading-6 font-light w-5"
+                >
+                  The Grid
+                </p>
+              </div>
+              <div class="card relative px-5 md:p-0 cursor-pointer">
+                <picture>
+                  <source
+                    srcset="assets/images/desktop/image-from-above.jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <img src="assets/images/mobile/image-from-above.jpg" />
+                  <div
+                    class="ml-5 w-52 md:w-full md:ml-0 absolute inset-0 bg-gradient-to-r md:bg-gradient-to-t from-black/65 to-transparent"
+                  ></div>
+                </picture>
+                <p
+                  class="absolute bottom-0 ml-5 mb-5 text-white font-josefin uppercase text-2xl leading-6 font-light w-5"
+                >
+                  From Above
+                </p>
+              </div>
+              <div class="card relative px-5 md:p-0 cursor-pointer">
+                <picture>
+                  <source
+                    srcset="assets/images/desktop/image-pocket-borealis.jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <img src="assets/images/mobile/image-pocket-borealis.jpg" />
+                  <div
+                    class="ml-5 w-52 md:w-full md:ml-0 absolute inset-0 bg-gradient-to-r md:bg-gradient-to-t from-black/65 to-transparent"
+                  ></div>
+                </picture>
+                <p
+                  class="absolute bottom-0 ml-5 mb-5 text-white font-josefin uppercase text-2xl leading-6 font-light w-5"
+                >
+                  Pocket Borealis
+                </p>
+              </div>
+              <div class="card relative px-5 md:p-0 cursor-pointer">
+                <picture>
+                  <source
+                    srcset="assets/images/desktop/image-curiosity.jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <img src="assets/images/mobile/image-curiosity.jpg" />
+                  <div
+                    class="ml-5 w-52 md:w-full md:ml-0 absolute inset-0 bg-gradient-to-r md:bg-gradient-to-t from-black/65 to-transparent"
+                  ></div>
+                </picture>
+                <p
+                  class="absolute bottom-0 ml-5 mb-5 text-white font-josefin uppercase text-2xl leading-6 font-light w-5"
+                >
+                  The Curiosity
+                </p>
+              </div>
+              <div class="card relative px-5 md:p-0 cursor-pointer">
+                <picture>
+                  <source
+                    srcset="assets/images/desktop/image-fisheye.jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <img src="assets/images/mobile/image-fisheye.jpg" />
+                  <div
+                    class="ml-5 w-52 md:w-full md:ml-0 absolute inset-0 bg-gradient-to-r md:bg-gradient-to-t from-black/65 to-transparent"
+                  ></div>
+                </picture>
+                <p
+                  class="absolute bottom-0 ml-5 mb-5 text-white font-josefin uppercase text-2xl leading-6 font-light w-32"
+                >
+                  Make It Fisheye
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-black mt-36">
+      <div
+        class="md:container flex flex-col md:flex-row text-center md:text-left font-primary justify-center items-center md:justify-between py-10"
+      >
+        <div>
           <img
             src="assets/images/logo.svg"
             alt="Loopstudios logo"
-            class="logo w-32 absolute z-30 md:relative"
-          />
-
-          <img
-            src="assets/images/icon-hamburger.svg"
-            alt=""
-            class="burger_btn absolute z-50 right-5 top-10 md:relative md:top-0 md:right-0 cursor-pointer md:hidden"
-            onclick="handleBurgerBtn()"
+            class="logo w-32"
           />
           <ul
-            class="navbar_list text-3xl md:text-base w-0 h-screen md:w-full md:h-auto bg-black text-white font-thin font-josefin md:bg-transparent flex flex-col md:flex-row gap-x-10 gap-4 fixed md:static top-0 left-0 z-20 overflow-hidden transition-all duration-300 ease-in-out"
+            class="footer_nav text-slate-200 text-sm md:mt-8 flex flex-col md:flex-row gap-y-4 md:gap-y-0 md:gap-x-6 py-8 md:p-0"
           >
-            <li class="mt-40 pl-5"><a href="#">About</a></li>
-            <li class="pl-5"><a href="#">Careers</a></li>
-            <li class="pl-5"><a href="#">Events</a></li>
-            <li class="pl-5"><a href="#">Products</a></li>
-            <li class="pl-5"><a href="#">Support</a></li>
+            <li class="footer_nav_item">
+              <a class="footer_nav_link" href="#">About</a>
+            </li>
+            <li class="footer_nav_item">
+              <a class="footer_nav_link" href="#">Careers</a>
+            </li>
+            <li class="footer_nav_item">
+              <a class="footer_nav_link" href="#">Events</a>
+            </li>
+            <li class="footer_nav_item">
+              <a class="footer_nav_link" href="#">Products</a>
+            </li>
+            <li class="footer_nav_item">
+              <a class="footer_nav_link" href="#">Support</a>
+            </li>
           </ul>
-        </nav>
+        </div>
+        <div>
+          <div
+            class="social flex justify-center md:justify-end gap-x-4 items-center mb-4"
+          >
+            <a href="#" class="social_link"
+              ><img
+                src="assets/images/icon-facebook.svg"
+                alt="facebook icon url"
+            /></a>
+            <a href="#" class="social_link"
+              ><img src="assets/images/icon-twitter.svg" alt="twitter icon url"
+            /></a>
+            <a href="#" class="social_link"
+              ><img
+                src="assets/images/icon-pinterest.svg"
+                alt="pinterest icon url"
+            /></a>
+            <a href="#" class="social_link"
+              ><img
+                src="assets/images/icon-instagram.svg"
+                alt="instagram icon url"
+            /></a>
+          </div>
+          <span class="text-darker-gray text-sm"
+            >&copy; 2021 Loopstudios. All rights reserved.</span
+          >
+        </div>
       </div>
-    </header>
-    <main class="">
-      <div class="md:container">
-        <section class="hero"></section>
-      </div>
-    </main>
-    <!--      Immersive experiences that deliver The
-    leader in interactive VR Founded in 2011, Loopstudios has been producing
-    world-class virtual reality projects for some of the best companies around
-    the globe. Our award-winning creations have transformed businesses through
-    digital experiences that bind to their brand. Our creations See all Deep
+    </footer>
+    <!--          See all Deep
     earth Night arcade Soccer team VR The grid From up above VR Pocket borealis
-    The curiosity Make it fisheye About Careers Events Products Support © 2021
-    Loopstudios. All rights reserved. -->
+    The curiosity Make it fisheye About Careers Events Products Support  -->
 
     <script src="main.js"></script>
   </body>

@@ -3,3 +3,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card:hover {
+  background-color: white;
+}
+
+.card:hover picture {
+  opacity: 35%;
+}
+
+.card:hover p {
+  color: black;
+}
+
+.nav_item,
+.footer_nav_item,
+.social_link {
+  position: relative;
+}
+
+.nav_item {
+  padding-bottom: 5px;
+}
+
+.footer_nav_item {
+  padding-bottom: 8px;
+}
+
+.social_link {
+  padding-bottom: 10px;
+}
+
+.nav_link:hover::after,
+.footer_nav_link:hover::after,
+.social_link:hover::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  background: white;
+  border-radius: 100px;
+}
